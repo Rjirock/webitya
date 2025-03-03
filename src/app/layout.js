@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { DefaultSeo } from "next-seo";
-import SEO from "../../next-seo.config"; // Importing SEO Config
 import "./globals.css";
+import SEOConfig from "../components/SEO"; // ✅ Import the Client Component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,18 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "WEBITYA",
+  description: "Webitya Web Services",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* 🔹 Viewport & PWA Config */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="manifest" href="/manifest.json" />
-
-        {/* 🔹 Default SEO Configuration */}
-        <DefaultSeo {...SEO} />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <SEOConfig /> {/* ✅ Now `next-seo` works inside a Client Component */}
         {children}
       </body>
     </html>
