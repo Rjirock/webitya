@@ -31,7 +31,7 @@ const HomeHero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
-        className="!md:min-h-screen !flex !flex-col md:!flex-row !items-center !justify-between !px-8 !py-10 !bg-gradient-to-r !from-gray-200 !to-gray-300 !text-black"
+        className="md:!min-h-screen !flex !flex-col md:!flex-row !items-center !justify-between !px-8 !py-10 !bg-gradient-to-r !from-gray-200 !to-gray-300 !text-black"
       >
         {/* Left - Hero Text */}
         <motion.div
