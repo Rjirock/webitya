@@ -9,13 +9,16 @@ const DrawerEl = ({ isOpen, toggleMenu }) => {
   useEffect(() => {
     if (isOpen) {
       const handleScroll = () => {
-        toggleMenu(); // Close the drawer when scrolling
+        toggleMenu(); // Close the drawer on scroll
       };
 
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
     }
-  }, [isOpen, toggleMenu]);
+  }, [isOpen]); // Removed toggleMenu from dependencies to avoid unnecessary re-renders
 
   if (!isOpen) return null;
 

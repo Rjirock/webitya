@@ -20,11 +20,14 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      if (isOpen) {
+        setIsOpen(false); // Close drawer on scroll
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isOpen]); // Re-run effect if `isOpen` changes
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full bg-white py-3 px-6 flex items-center justify-between transition-all duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full bg-white py-3 px-6 flex items-center justify-between transition-all duration-300 z-[1000] ${
         isScrolled ? "shadow-lg backdrop-blur-lg" : "shadow-md"
       }`}
     >
