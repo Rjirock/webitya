@@ -26,13 +26,13 @@ const HomeBusinessSection = () => {
       </div>
       
       <div className="relative flex justify-center mt-10">
-        <div className="relative w-64 h-40 md:w-80 md:h-52 transform rotate-[-5deg] border border-black rounded-lg overflow-hidden">
+        <div className="relative w-64 h-40 md:w-80 md:h-52 transform rotate-[-5deg] border-3 border-white rounded-lg overflow-hidden">
           <Image src="/Images/img1.jpeg" alt="Business Growth" layout="fill" objectFit="cover" />
         </div>
-        <div className="absolute top-10 left-20 w-64 h-40 md:w-80 md:h-52 transform rotate-[5deg] border border-black rounded-lg overflow-hidden">
+        <div className="absolute top-10 left-20 w-64 h-40 md:w-80 md:h-52 transform rotate-[5deg] border-3 border-white rounded-lg overflow-hidden">
           <Image src="/Images/img2.jpeg" alt="Marketing Strategies" layout="fill" objectFit="cover" />
         </div>
-        <div className="absolute top-20 right-10 w-64 h-40 md:w-80 md:h-52 transform rotate-[-2deg] border border-black rounded-lg overflow-hidden">
+        <div className="absolute top-20 right-10 w-64 h-40 md:w-80 md:h-52 transform rotate-[-2deg] border-3 border-white rounded-lg overflow-hidden">
           <Image src="/Images/img3.jpeg" alt="SEO Optimization" layout="fill" objectFit="cover" />
         </div>
       </div>
