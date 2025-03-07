@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         {/* Floating Icons */}
         <div className="fixed bottom-4 right-4 flex flex-col gap-2">
           <a
-            href="https://wa.me/yourwhatsappphonenumber"
+            href="https://wa.me/9693245941"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black p-2 rounded text-white shadow-lg hover:bg-gray-800 w-10 h-10 flex items-center justify-center"
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             <WhatsAppOutlined style={{ fontSize: "20px" }} />
           </a>
           <a
-            href="tel:yourphonenumber"
+            href="tel:9693245941"
             className="bg-black p-2 rounded text-white shadow-lg hover:bg-gray-800 w-10 h-10 flex items-center justify-center"
           >
             <PhoneOutlined style={{ fontSize: "20px" }} />
