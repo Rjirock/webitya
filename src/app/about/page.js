@@ -1,8 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/FooterEl";
+
 import AboutHeroSection from "@/components/AboutUsPage/AboutUsHeroSection";
 import TeamSection from "@/components/AboutUsPage/AboutTeamSection";
 import AboutInternsSection from "@/components/AboutUsPage/AboutOurInterns";
@@ -51,7 +50,7 @@ const About = () => {
 
   return (
     <>
-    <Navbar/>
+ 
       <button
         className="fixed top-4 left-4 z-50 bg-blue-500 text-white p-3 rounded-full shadow-lg"
         onClick={toggleSidebar}

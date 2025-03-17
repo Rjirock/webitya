@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FooterEl from "@/components/FooterEl";
 import { WhatsAppOutlined, PhoneOutlined } from "@ant-design/icons";
-
+import { Analytics } from "@vercel/analytics/react"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
