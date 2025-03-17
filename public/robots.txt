@@ -3,5 +3,9 @@ Allow: /
 Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /wp-admin/  # If your old WordPress links still exist
+Disallow: /wp-login.php  # To block unnecessary WordPress login pages
 
 Sitemap: https://webitya.com/sitemap.xml
