@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; 
 import Navbar from "@/components/Navbar";
 import FooterEl from "@/components/FooterEl";
 import { WhatsAppOutlined, PhoneOutlined } from "@ant-design/icons";

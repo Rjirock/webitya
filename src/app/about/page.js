@@ -6,6 +6,7 @@ import AboutHeroSection from "@/components/AboutUsPage/AboutUsHeroSection";
 import TeamSection from "@/components/AboutUsPage/AboutTeamSection";
 import AboutInternsSection from "@/components/AboutUsPage/AboutOurInterns";
 import AboutUsCTA from "@/components/AboutUsPage/AboutUsCTA";
+import AboutVisionMissionSection from "@/components/AboutUsPage/AboutVisionMission";
 
 
 const About = () => {
@@ -82,6 +83,9 @@ const About = () => {
       <main className={`transition-all duration-300 ease-in-out ${isSidebarOpen ? "ml-40" : "ml-0"} lg:ml-40`}>
         <section id="hero">
           <AboutHeroSection/>
+        </section>
+        <section id="hero1">
+          <AboutVisionMissionSection/>
         </section>
         <section id="intro">
           <TeamSection/>

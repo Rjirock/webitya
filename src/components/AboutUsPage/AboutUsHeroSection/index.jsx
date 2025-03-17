@@ -1,8 +1,8 @@
-import { TeamOutlined } from "@ant-design/icons";
+
 
 const AboutHeroSection = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center">
+    <section className="bg-white mt-16 px-6 md:px-16 py-5 md:py-10 flex flex-col md:flex-row items-center">
       {/* Left Side: Text Content */}
       <div className="md:w-1/2">
         <h2 className="text-4xl font-bold text-gray-900">About Webitya</h2>
@@ -19,11 +19,10 @@ const AboutHeroSection = () => {
       <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
         <div className="relative w-full max-w-lg">
           <img
-            src="/images/webitya-about.png" 
+            src="/aboutHero.webp" 
             alt="Webitya Team Illustration"
             className="w-full"
           />
-          <TeamOutlined className="absolute top-0 right-0 text-gray-300 text-6xl" />
         </div>
       </div>
     </section>
