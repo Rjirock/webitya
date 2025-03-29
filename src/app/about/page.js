@@ -1,26 +1,19 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
-import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-
 import AboutHeroSection from "@/components/AboutUsPage/AboutUsHeroSection";
 import TeamSection from "@/components/AboutUsPage/AboutTeamSection";
 import AboutInternsSection from "@/components/AboutUsPage/AboutOurInterns";
 import AboutUsCTA from "@/components/AboutUsPage/AboutUsCTA";
 import AboutVisionMissionSection from "@/components/AboutUsPage/AboutVisionMission";
 
-
 const About = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-
-  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setSidebarOpen(false);
   };
 
   const navLinks = [
@@ -50,21 +43,9 @@ const About = () => {
   }, [navLinks]);
 
   return (
-    <>
- 
-      <button
-        className="fixed top-4 left-4 z-50 bg-blue-500 text-white p-3 rounded-full shadow-lg"
-        onClick={toggleSidebar}
-        aria-label="Toggle Sidebar"
-      >
-        {isSidebarOpen ? <CloseOutlined className="text-lg" /> : <MenuOutlined className="text-lg" />}
-      </button>
-
-      <aside
-        className={`fixed top-20 left-0 h-full w-40 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out z-40 ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 lg:block`}
-      >
+    <div className="flex">
+      {/* Sidebar - Visible only on large screens */}
+      <aside className="hidden lg:block fixed top-20 left-0 h-full w-40 bg-white border-r border-gray-200">
         <ul className="space-y-3 py-6 px-4">
           {navLinks.map(({ id, label }) => (
             <li
@@ -80,34 +61,34 @@ const About = () => {
         </ul>
       </aside>
 
-      <main className={`transition-all duration-300 ease-in-out ${isSidebarOpen ? "ml-40" : "ml-0"} lg:ml-40`}>
+      {/* Main Content */}
+      <main className="w-full lg:ml-40 p-6">
         <section id="hero">
-          <AboutHeroSection/>
+          <AboutHeroSection />
         </section>
         <section id="hero1">
-          <AboutVisionMissionSection/>
+          <AboutVisionMissionSection />
         </section>
         <section id="intro">
-          <TeamSection/>
+          <TeamSection />
         </section>
         <section id="content">
-          <AboutInternsSection/>
+          <AboutInternsSection />
         </section>
         <section id="steps">
-           <AboutUsCTA/>
+          <AboutUsCTA />
         </section>
         <section id="benefits">
-        <h1>Aditya 1</h1>
+          <h1>Aditya 1</h1>
         </section>
         <section id="positioning">
-        <h1>Aditya 1</h1>
+          <h1>Aditya 1</h1>
         </section>
         <section id="premium-advantage">
-        <h1>Aditya 1</h1>
+          <h1>Aditya 1</h1>
         </section>
-    
       </main>
-   </>
+    </div>
   );
 };
 
