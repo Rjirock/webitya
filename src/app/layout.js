@@ -28,19 +28,33 @@ export default function RootLayout({ children }) {
         {/* Google AdSense Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-6282388187810840" />
 
-        {/* Google AdSense Script */}
+        {/* Google AdSense Scripts */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6282388187810840"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+
+        {/* AMP Auto Ads Script */}
+        <Script
+          async
+          custom-element="amp-auto-ads"
+          src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* AMP Auto Ads */}
+        <amp-auto-ads
+          type="adsense"
+          data-ad-client="ca-pub-6282388187810840"
+        ></amp-auto-ads>
+
         <Navbar />
         {children}
         <FooterEl />
-        
+
         {/* Floating Icons */}
         <div className="fixed bottom-4 right-4 flex flex-col gap-2">
           <a
