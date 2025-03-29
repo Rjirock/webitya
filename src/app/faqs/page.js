@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { NextSeo } from "next-seo";
 import { Collapse } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 
@@ -74,11 +73,7 @@ const FAQWebitya = () => {
 
   return (
     <>
-      <NextSeo
-        title="FAQs - Webitya Web Services | Your Digital Growth Partner"
-        description="Find answers to common questions about Webitya Web Services, including web development, SEO, digital marketing, and more."
-        canonical="https://webitya.com/faqs"
-      />
+      
 
       {/* FAQ Section */}
       <section className="mt-20 px-6 md:px-6 mx-auto text-center">
