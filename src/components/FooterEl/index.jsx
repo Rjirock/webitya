@@ -35,7 +35,7 @@ const footerData = [
       { name: 'Privacy', href: '/legal/privacy-policy' },
       { name: 'Terms of service', href: '/legal/terms' },
       { name: 'Disclaimer', href: '/legal/disclaimer' },
-      { name: 'Contact', href: '/legal/contact-us' },
+      { name: 'Contact', href: '/contact-us' },
     ],
   },
 ];
