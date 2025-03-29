@@ -12,7 +12,7 @@ const footerData = [
       { name: 'Docs', href: '#' },
       { name: 'Learn', href: '#' },
       { name: 'Case Studies', href: '#' },
-      { name: 'Blog', href: '/blogs' },
+      { name: 'Blog', href: '#' },
       { name: 'FAQS', href: '/faqs' },
       { name: 'Team', href: '#' },
       { name: 'SEO Analytics', href: '#' },

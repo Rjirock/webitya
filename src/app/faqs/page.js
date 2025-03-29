@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { NextSeo } from "next-seo";
 import { Collapse } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
@@ -72,23 +72,6 @@ const FAQWebitya = () => {
     },
   ];
 
-  // Memoized JSON-LD Schema Markup
-  const schemaMarkup = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map((faq) => ({
-        "@type": "Question",
-        "name": faq.label,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.children.props.children,
-        },
-      })),
-    }),
-    [faqs]
-  );
-
   return (
     <>
       <NextSeo
@@ -96,15 +79,10 @@ const FAQWebitya = () => {
         description="Find answers to common questions about Webitya Web Services, including web development, SEO, digital marketing, and more."
         canonical="https://webitya.com/faqs"
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-      />
 
       {/* FAQ Section */}
       <section className="mt-20 px-6 md:px-6 mx-auto text-center">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-12">
-          
           Frequently Asked Questions
         </h1>
         <div className="bg-white shadow-lg rounded-lg p-6">
