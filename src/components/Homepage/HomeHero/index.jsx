@@ -27,6 +27,17 @@ const HomeHero = () => {
 
   return (
     <>
+     <div>
+     <motion.div
+  className="bg-black text-white py-2 text-center !mt-20 overflow-hidden"
+  initial={{ x: "100%" }}
+  animate={{ x: "-100%" }}
+  transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+>
+  This Website is Under Construction 🚧 Stay tuned for updates!
+</motion.div>
+     </div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
