@@ -33,9 +33,9 @@ const footerData = [
     title: 'About us',
     links: [
       { name: 'Privacy', href: '/legal/privacy-policy' },
-      { name: 'Terms of service', href: '/terms' },
-      { name: 'Disclaimer', href: '/disclaimer' },
-      { name: 'Contact', href: '/contact-us' },
+      { name: 'Terms of service', href: '/legal/terms' },
+      { name: 'Disclaimer', href: '/legal/disclaimer' },
+      { name: 'Contact', href: '/legal/contact-us' },
     ],
   },
 ];
