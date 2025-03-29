@@ -10,7 +10,7 @@ const menuLinks = [
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "/contact-us" },
 ];
 
 const Navbar = () => {
